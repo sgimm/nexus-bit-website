@@ -39,25 +39,33 @@
 
     .card {
       position: relative;
-      background: rgba(12, 18, 40, 0.85);
       border: 1px solid rgba(30, 45, 143, 0.45);
       border-radius: 16px;
-      padding: 56px 48px 48px;
       max-width: 620px;
       width: 100%;
       text-align: center;
-      backdrop-filter: blur(4px);
+      overflow: hidden;
       box-shadow:
         0 0 0 1px rgba(74, 110, 255, 0.08),
         0 8px 48px rgba(10, 14, 50, 0.7),
         0 0 80px rgba(30, 45, 143, 0.15);
     }
 
+    .card-header {
+      background: #f0f2f8;
+      padding: 40px 48px 32px;
+    }
+
+    .card-body {
+      background: rgba(12, 18, 40, 0.95);
+      padding: 36px 48px 48px;
+      backdrop-filter: blur(4px);
+    }
+
     .logo {
       width: 180px;
       height: auto;
-      margin-bottom: 32px;
-      filter: drop-shadow(0 0 18px rgba(74, 110, 255, 0.35));
+      margin-bottom: 0;
     }
 
     h1 {
@@ -144,7 +152,10 @@
 </head>
 <body>
   <div class="card">
-    <img src="images/NexusBit.png" alt="Nexus Bit Logo" class="logo">
+    <div class="card-header">
+      <img src="images/NexusBit.png" alt="Nexus Bit Logo" class="logo">
+    </div>
+    <div class="card-body">
     <h1>Nexus Bit</h1>
     <p class="tagline">Technology and Creativity</p>
     <hr class="divider">
@@ -162,6 +173,7 @@
       <p class="contact">
         Or reach out directly: <a href="mailto:info@nexus-bit.de">info@nexus-bit.de</a>
       </p>
+    </div>
     </div>
   </div>
 </body>
