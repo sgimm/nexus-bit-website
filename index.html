@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Bit</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #080c1a;
+      color: #c8d0e8;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* subtle grid background */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(30, 45, 143, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 45, 143, 0.08) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .card {
+      position: relative;
+      background: rgba(12, 18, 40, 0.85);
+      border: 1px solid rgba(30, 45, 143, 0.45);
+      border-radius: 16px;
+      padding: 56px 48px 48px;
+      max-width: 620px;
+      width: 100%;
+      text-align: center;
+      backdrop-filter: blur(4px);
+      box-shadow:
+        0 0 0 1px rgba(74, 110, 255, 0.08),
+        0 8px 48px rgba(10, 14, 50, 0.7),
+        0 0 80px rgba(30, 45, 143, 0.15);
+    }
+
+    .logo {
+      width: 180px;
+      height: auto;
+      margin-bottom: 32px;
+      filter: drop-shadow(0 0 18px rgba(74, 110, 255, 0.35));
+    }
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: #e8ecf8;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .tagline {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #4a6eff;
+      margin-bottom: 40px;
+    }
+
+    .divider {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(74, 110, 255, 0.4), transparent);
+      margin-bottom: 32px;
+    }
+
+    .description {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #9aa4c4;
+      margin-bottom: 16px;
+    }
+
+    .description:last-of-type {
+      margin-bottom: 40px;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      align-items: center;
+    }
+
+    a.btn {
+      display: inline-block;
+      padding: 12px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      transition: all 0.2s ease;
+    }
+
+    a.btn-primary {
+      background: #1e2d8f;
+      color: #e8ecf8;
+      border: 1px solid #2e3fa8;
+    }
+
+    a.btn-primary:hover {
+      background: #2a3db8;
+      border-color: #4a6eff;
+      box-shadow: 0 0 20px rgba(74, 110, 255, 0.3);
+      color: #fff;
+    }
+
+    .contact {
+      font-size: 0.85rem;
+      color: #6070a0;
+    }
+
+    .contact a {
+      color: #4a6eff;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      color: #7a96ff;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="images/NexusBit.png" alt="Nexus Bit Logo" class="logo">
+    <h1>Nexus Bit</h1>
+    <p class="tagline">Technology and Creativity</p>
+    <hr class="divider">
+    <p class="description">
+      Architecture, integration, and reliable systems —<br>
+      from implementation to enterprise-scale design.
+    </p>
+    <p class="description">
+      We design and build systems that remain stable under real-world conditions.
+    </p>
+    <div class="actions">
+      <a href="https://linkedin.com/company/nexus-bit" class="btn btn-primary" target="_blank" rel="noopener">
+        Visit us on LinkedIn
+      </a>
+      <p class="contact">
+        Or reach out directly: <a href="mailto:info@nexusbit.com">info@nexusbit.com</a>
+      </p>
+    </div>
+  </div>
+</body>
+</html>
