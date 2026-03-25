@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum – Nexus Bit</title>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #080c1a;
+      color: #c8d0e8;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      position: relative;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(30, 45, 143, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 45, 143, 0.08) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+    }
+
+    .back {
+      align-self: flex-start;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #4a6eff;
+      text-decoration: none;
+      font-size: 0.85rem;
+      margin-bottom: 32px;
+      transition: color 0.2s;
+    }
+    .back:hover { color: #7a96ff; }
+
+    .card {
+      position: relative;
+      border: 1px solid rgba(30, 45, 143, 0.45);
+      border-radius: 16px;
+      max-width: 720px;
+      width: 100%;
+      overflow: hidden;
+      box-shadow:
+        0 0 0 1px rgba(74, 110, 255, 0.08),
+        0 8px 48px rgba(10, 14, 50, 0.7),
+        0 0 80px rgba(30, 45, 143, 0.15);
+    }
+
+    .card-header {
+      background: #f0f2f8;
+      padding: 28px 40px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .card-header img {
+      height: 56px;
+      width: auto;
+    }
+
+    .card-header-text h1 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #0d1433;
+      margin-bottom: 2px;
+    }
+
+    .card-header-text span {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #1e2d8f;
+    }
+
+    .card-body {
+      background: rgba(12, 18, 40, 0.95);
+      padding: 40px;
+    }
+
+    /* language tabs */
+    .tabs {
+      display: flex;
+      gap: 0;
+      margin-bottom: 36px;
+      border-bottom: 1px solid rgba(74, 110, 255, 0.2);
+    }
+
+    .tab-btn {
+      background: none;
+      border: none;
+      padding: 10px 24px;
+      color: #6070a0;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active {
+      color: #e8ecf8;
+      border-bottom-color: #4a6eff;
+    }
+
+    .tab-btn:hover:not(.active) {
+      color: #9aa4c4;
+    }
+
+    .tab-content { display: none; }
+    .tab-content.active { display: block; }
+
+    section {
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #4a6eff;
+      margin-bottom: 10px;
+    }
+
+    p, address {
+      font-size: 0.9rem;
+      line-height: 1.8;
+      color: #9aa4c4;
+      font-style: normal;
+    }
+
+    a {
+      color: #4a6eff;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #7a96ff;
+      text-decoration: underline;
+    }
+
+    .divider {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(74, 110, 255, 0.25), transparent);
+      margin: 32px 0;
+    }
+  </style>
+</head>
+<body>
+  <a href="/" class="back">&#8592; Zurück / Back</a>
+
+  <div class="card">
+    <div class="card-header">
+      <img src="images/NexusBit.png" alt="Nexus Bit Logo">
+      <div class="card-header-text">
+        <h1>Nexus Bit</h1>
+        <span>Technology and Creativity</span>
+      </div>
+    </div>
+    <div class="card-body">
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('de', this)">Deutsch</button>
+        <button class="tab-btn" onclick="showTab('en', this)">English</button>
+      </div>
+
+      <!-- GERMAN -->
+      <div id="tab-de" class="tab-content active">
+
+        <section>
+          <h2>Impressum</h2>
+          <p>Angaben gemäß § 5 TMG</p>
+        </section>
+
+        <section>
+          <h2>Anbieter</h2>
+          <address>
+            Nexus Bit UG (haftungsbeschränkt) i.G.<br>
+            Mühlenstr. 8a<br>
+            14167 Berlin
+          </address>
+        </section>
+
+        <section>
+          <h2>Registereintrag</h2>
+          <p>
+            Handelsregister: HRB 278655<br>
+            Registergericht: Amtsgericht Berlin-Charlottenburg
+          </p>
+        </section>
+
+        <section>
+          <h2>Umsatzsteuer-ID</h2>
+          <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE456962007</p>
+        </section>
+
+        <section>
+          <h2>Vertreten durch</h2>
+          <p>Geschäftsführer: Stephan Gimm</p>
+        </section>
+
+        <section>
+          <h2>Kontakt</h2>
+          <p>
+            Mobil: <a href="tel:+4915562901223">+49 155 629 01223</a><br>
+            E-Mail: <a href="mailto:info@nexus-bit.de">info@nexus-bit.de</a>
+          </p>
+        </section>
+
+        <hr class="divider">
+
+        <section>
+          <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+          <address>
+            Stephan Gimm<br>
+            Mühlenstr. 8a<br>
+            14167 Berlin
+          </address>
+        </section>
+
+        <section>
+          <h2>EU-Streitschlichtung</h2>
+          <p>
+            Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:<br>
+            <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a><br>
+            Unsere E-Mail-Adresse finden Sie oben.
+          </p>
+        </section>
+
+        <section>
+          <h2>Verbraucherstreitbeilegung</h2>
+          <p>Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+        </section>
+
+      </div>
+
+      <!-- ENGLISH -->
+      <div id="tab-en" class="tab-content">
+
+        <section>
+          <h2>Legal Notice</h2>
+          <p>Information in accordance with § 5 TMG (German Telemedia Act)</p>
+        </section>
+
+        <section>
+          <h2>Provider</h2>
+          <address>
+            Nexus Bit UG (limited liability) — in formation<br>
+            Mühlenstr. 8a<br>
+            14167 Berlin, Germany
+          </address>
+        </section>
+
+        <section>
+          <h2>Commercial Register</h2>
+          <p>
+            Register number: HRB 278655<br>
+            Register court: Amtsgericht Berlin-Charlottenburg
+          </p>
+        </section>
+
+        <section>
+          <h2>VAT Identification Number</h2>
+          <p>VAT ID pursuant to § 27a of the German Value Added Tax Act: DE456962007</p>
+        </section>
+
+        <section>
+          <h2>Represented by</h2>
+          <p>Managing Director: Stephan Gimm</p>
+        </section>
+
+        <section>
+          <h2>Contact</h2>
+          <p>
+            Mobile: <a href="tel:+4915562901223">+49 155 629 01223</a><br>
+            Email: <a href="mailto:info@nexus-bit.de">info@nexus-bit.de</a>
+          </p>
+        </section>
+
+        <hr class="divider">
+
+        <section>
+          <h2>Person responsible for content (§ 18 para. 2 MStV)</h2>
+          <address>
+            Stephan Gimm<br>
+            Mühlenstr. 8a<br>
+            14167 Berlin, Germany
+          </address>
+        </section>
+
+        <section>
+          <h2>EU Dispute Resolution</h2>
+          <p>
+            The European Commission provides a platform for online dispute resolution (ODR):<br>
+            <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">https://ec.europa.eu/consumers/odr</a><br>
+            Our email address can be found above.
+          </p>
+        </section>
+
+        <section>
+          <h2>Consumer Dispute Resolution</h2>
+          <p>We are not willing or obliged to participate in dispute resolution proceedings before a consumer arbitration board.</p>
+        </section>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    function showTab(lang, btn) {
+      document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
+      document.getElementById('tab-' + lang).classList.add('active');
+      btn.classList.add('active');
+    }
+  </script>
+</body>
+</html>
