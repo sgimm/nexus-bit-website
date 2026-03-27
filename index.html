@@ -4,180 +4,127 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nexus Bit</title>
+  <link rel="stylesheet" href="style.css">
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: #080c1a;
-      color: #c8d0e8;
-      font-family: 'Segoe UI', Arial, sans-serif;
-      min-height: 100vh;
+    main {
+      flex: 1;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 40px 20px;
-      position: relative;
-      overflow: hidden;
+      padding: 60px 24px;
     }
 
-    /* subtle grid background */
-    body::before {
-      content: '';
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(30, 45, 143, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(30, 45, 143, 0.08) 1px, transparent 1px);
-      background-size: 40px 40px;
-      pointer-events: none;
-    }
-
-    .card {
-      position: relative;
-      border: 1px solid rgba(30, 45, 143, 0.45);
-      border-radius: 16px;
-      max-width: 620px;
+    .hero {
+      max-width: 640px;
       width: 100%;
       text-align: center;
-      overflow: hidden;
-      box-shadow:
-        0 0 0 1px rgba(74, 110, 255, 0.08),
-        0 8px 48px rgba(10, 14, 50, 0.7),
-        0 0 80px rgba(30, 45, 143, 0.15);
     }
 
-    .card-header {
-      background: #f0f2f8;
-      padding: 40px 48px 32px;
-    }
-
-    .card-body {
-      background: rgba(12, 18, 40, 0.95);
-      padding: 36px 48px 48px;
-      backdrop-filter: blur(4px);
-    }
-
-    .logo {
-      width: 180px;
+    .hero-logo {
+      width: 160px;
       height: auto;
-      margin-bottom: 0;
+      margin-bottom: 36px;
     }
 
     h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 700;
-      letter-spacing: 0.12em;
-      color: #e8ecf8;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      margin-bottom: 6px;
+      color: #1a2566;
+      margin-bottom: 8px;
     }
 
     .tagline {
       font-size: 0.75rem;
-      letter-spacing: 0.25em;
+      letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: #4a6eff;
+      color: #8a99cc;
       margin-bottom: 40px;
     }
 
     .divider {
       border: none;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(74, 110, 255, 0.4), transparent);
-      margin-bottom: 32px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #1e2d8f, transparent);
+      margin: 0 auto 40px;
+      width: 60px;
     }
 
     .description {
       font-size: 1rem;
-      line-height: 1.75;
-      color: #9aa4c4;
-      margin-bottom: 16px;
+      line-height: 1.8;
+      color: #4a5478;
+      margin-bottom: 14px;
     }
 
     .description:last-of-type {
-      margin-bottom: 40px;
+      margin-bottom: 48px;
     }
 
     .actions {
       display: flex;
       flex-direction: column;
-      gap: 14px;
       align-items: center;
-    }
-
-    a.btn {
-      display: inline-block;
-      padding: 12px 32px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      transition: all 0.2s ease;
-    }
-
-    a.btn-primary {
-      background: #1e2d8f;
-      color: #e8ecf8;
-      border: 1px solid #2e3fa8;
-    }
-
-    a.btn-primary:hover {
-      background: #2a3db8;
-      border-color: #4a6eff;
-      box-shadow: 0 0 20px rgba(74, 110, 255, 0.3);
-      color: #fff;
+      gap: 16px;
     }
 
     .contact {
-      font-size: 0.85rem;
-      color: #6070a0;
+      font-size: 0.875rem;
+      color: #8a99cc;
     }
 
     .contact a {
-      color: #4a6eff;
+      color: #1e2d8f;
       text-decoration: none;
+      font-weight: 500;
     }
 
     .contact a:hover {
-      color: #7a96ff;
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="card-header">
-      <img src="images/NexusBit.png" alt="Nexus Bit Logo" class="logo">
+
+  <header>
+    <div class="header-brand">
+      <img src="images/NexusBit.png" alt="Nexus Bit Logo">
+      <div class="header-brand-text">
+        <strong>Nexus Bit</strong>
+        <span>Technology and Creativity</span>
+      </div>
     </div>
-    <div class="card-body">
-    <h1>Nexus Bit</h1>
-    <p class="tagline">Technology</p>
-    <hr class="divider">
-    <p class="description">
-      Architecture, integration, and reliable systems —<br>
-      from implementation to enterprise-scale design.
-    </p>
-    <p class="description">
-      We design and build systems that remain stable under real-world conditions.
-    </p>
-    <div class="actions">
-      <a href="https://linkedin.com/company/nexus-bit" class="btn btn-primary" target="_blank" rel="noopener">
-        Visit us on LinkedIn
-      </a>
-      <p class="contact">
-        Or reach out directly: <a href="mailto:info@nexus-bit.de">info@nexus-bit.de</a>
+  </header>
+
+  <main>
+    <div class="hero">
+      <img src="images/NexusBit.png" alt="Nexus Bit" class="hero-logo">
+      <h1>Nexus Bit</h1>
+      <p class="tagline">Technology and Creativity</p>
+      <hr class="divider">
+      <p class="description">
+        Architecture, integration, and reliable systems —<br>
+        from implementation to enterprise-scale design.
       </p>
+      <p class="description">
+        We design and build systems that remain stable under real-world conditions.
+      </p>
+      <div class="actions">
+        <a href="https://linkedin.com/company/nexus-bit" class="btn btn-primary" target="_blank" rel="noopener">
+          Visit us on LinkedIn
+        </a>
+        <p class="contact">
+          Or reach out directly: <a href="mailto:info@nexus-bit.de">info@nexus-bit.de</a>
+        </p>
+      </div>
     </div>
-    <p style="margin-top: 32px; font-size: 0.75rem;">
-      <a href="/impressum.html" style="color: #3a4a70; text-decoration: none; letter-spacing: 0.05em;">Impressum / Legal Notice</a>
-    </p>
-    </div>
-  </div>
+  </main>
+
+  <footer>
+    &copy; 2026 Nexus Bit UG (haftungsbeschränkt) i.G. &nbsp;|&nbsp;
+    <a href="/impressum.html">Impressum / Legal Notice</a>
+  </footer>
+
 </body>
 </html>
